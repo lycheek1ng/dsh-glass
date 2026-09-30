@@ -1,0 +1,39 @@
+{
+  "name": "dsh-plugin-glass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Windows Acrylic/Mica frosted glass for the DeepSeek Harness desktop shell, with live-adjustable parameters.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4"
+  }
+}

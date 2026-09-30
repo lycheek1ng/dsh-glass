@@ -1,0 +1,14 @@
+# dsh-plugin-glass bundle layer: insert this plugin's host row without touching
+# any other entry. The profile patch layer (§4.3) is the one actually used on this
+# machine; this file only matters when the package is loaded as a bundle.
+- insert:
+    - id: glass-plugin
+      name: 'dsh-plugin-glass'
+      config:
+        enabled: true
+        material: acrylic
+        scope: sidebar
+        sidebarAlpha: 55
+        contentAlpha: 35
+        opaqueContent: 92
+        blurPx: 18
