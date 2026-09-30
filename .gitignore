@@ -1,0 +1,22 @@
+# Never commit material extracted from, or copied out of, the DeepSeek Harness installation.
+# The shell patch is built at install time from the user's own app.asar; nothing derived from
+# that archive belongs in this repository.
+*.asar
+*.asar.original
+*.asar.glass
+*.asar.unpacked/
+
+# Tool cache (pristine sources, rebuilt archives, patch records)
+tools/.cache/
+
+# Local scratch, screenshots and notes used while developing the patch
+_work/
+docs/local/
+*.log
+
+# Editor / OS noise
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
